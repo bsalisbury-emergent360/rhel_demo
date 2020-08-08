@@ -1,0 +1,8 @@
+---
+
+- name: "Launch RHEL AMI"
+  hosts: localhost
+  gather_facts: no
+
+  roles:
+  - launch_rhel_ami

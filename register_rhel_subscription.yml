@@ -1,0 +1,8 @@
+---
+
+- name: "Register RHEL subscription"
+  hosts: all
+  gather_facts: yes
+
+  roles:
+  - register_rhel_subscription

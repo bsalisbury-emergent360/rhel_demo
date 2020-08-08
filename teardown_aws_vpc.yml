@@ -1,0 +1,8 @@
+---
+
+- name: "Teardown AWS VPC"
+  hosts: localhost
+  gather_facts: no
+
+  roles:
+  - teardown_aws_vpc
