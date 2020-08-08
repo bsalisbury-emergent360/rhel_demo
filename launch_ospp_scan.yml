@@ -1,0 +1,8 @@
+---
+
+- name: "Launch OSPP scan"
+  hosts: all
+  gather_facts: yes
+
+  roles:
+  - ansible-role-rhel8-ospp
