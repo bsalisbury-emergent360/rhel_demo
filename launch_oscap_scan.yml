@@ -1,8 +1,8 @@
 ---
 
-- name: "Launch OSPP scan"
+- name: "Launch OpenSCAP scan"
   hosts: all
   gather_facts: yes
 
   roles:
-  - ansible-role-rhel8-ospp
+  - install_openscap
