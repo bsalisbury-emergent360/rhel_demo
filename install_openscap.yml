@@ -1,0 +1,34 @@
+- name: install openscap
+  hosts: all
+  gather_facts: yes
+
+  tasks:
+  - name: install packages
+    yum:
+      name:
+        - firewalld
+        - httpd
+        - openscap-scanner
+        - scap-security-guide
+        - python3-lxml
+    become: true
+    become_method: sudo
+
+  - name: 
+    firewalld:
+      service: http
+      permanent: yes
+      zone: public
+      state: enabled
+
+  - name: reload firewalld
+    systemd:
+      state: reloaded
+      enabled: yes
+      name: firewalld
+
+  - name: enable httpd
+    systemd:
+      state: started
+      enabled: yes
+      name: httpd
