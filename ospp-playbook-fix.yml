@@ -4144,3 +4144,31 @@
         - PCI-DSS-Req-8.1.8
         - CJIS-5.5.6
 
+    - debug:
+        msg: "{{ incident_num }}"
+
+    - name: Resolve incident
+      snow_record:
+        username: "{{ snow_username }}"
+        password: "{{ snow_password }}"
+        instance: "{{ snow_instance }}"
+        state: present
+        table: incident
+        number: "{{ incident_num }}"
+        data:
+          state: 6
+          comments: "Banner has been updated, marking resolved"
+      when: incident_num is defined
+
+    - name: Close incident
+      snow_record:
+        username: "{{ snow_username }}"
+        password: "{{ snow_password }}"
+        instance: "{{ snow_instance }}"
+        number: "{{ incident_num }}"
+        state: present
+        table: incident
+        data:
+          state: 7
+          comments: "Banner has been updated, closing ticket"
+      when: incident_num is defined
