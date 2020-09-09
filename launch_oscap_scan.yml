@@ -5,4 +5,4 @@
   gather_facts: yes
 
   roles:
-  - install_openscap
+  - launch_oscap_scan
