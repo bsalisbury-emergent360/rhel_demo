@@ -1,0 +1,13 @@
+---
+
+- name: "Launch OpenSCAP mitigation"
+  hosts: all
+  gather_facts: yes
+
+  roles:
+  - ospp-playbook-fix.yml
+
+  tasks:
+    - include_role:
+        name: call_snow
+      when: snow_call|bool
