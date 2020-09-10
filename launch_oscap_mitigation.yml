@@ -5,7 +5,7 @@
   gather_facts: yes
 
   roles:
-  - ospp-playbook-fix.yml
+  - rhel8_ospp
 
   tasks:
     - include_role:
