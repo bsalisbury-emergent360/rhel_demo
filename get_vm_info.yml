@@ -4,6 +4,8 @@
   hosts: all
   gather_facts: yes
 
+  tasks:
+  
     - debug:
         var: ansible_facts
 
@@ -19,7 +21,7 @@
     - debug:
         msg: "foo"
       when: kernel is version('4.18.0', '<')
-      
+
 - name: print vm info
   hosts: localhost
   connection: local
