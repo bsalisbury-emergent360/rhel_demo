@@ -18,7 +18,7 @@
         - all
 
     - debug:
-        msg: "{{ versions | to_nice_json }}"
+        var: versions | to_nice_json
 
     - debug:
         var: ansible_facts
