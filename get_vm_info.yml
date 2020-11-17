@@ -4,6 +4,22 @@
   hosts: all
   gather_facts: yes
 
+    - debug:
+        var: ansible_facts
+
+    - debug:
+        var: ansible_distribution
+
+    - debug:
+        var: tags.Stage
+
+    - debug:
+        var: kernel
+
+    - debug:
+        msg: "foo"
+      when: kernel is version('4.18.0', '<')
+      
 - name: print vm info
   hosts: localhost
   connection: local
@@ -20,18 +36,3 @@
     - debug:
         msg: "{{ lookup('template', './templates/print_versions.j2') }}"
 
-    - debug:
-        var: ansible_facts
-
-    - debug:
-        var: ansible_distribution
-
-    - debug:
-        var: tags.Stage
-
-    - debug:
-        var: kernel
-
-    - debug:
-        msg: "foo"
-      when: kernel is version('4.18.0', '<')
