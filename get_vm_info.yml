@@ -13,3 +13,6 @@
 
     - debug:
         var: tags.Stage
+
+    - debug:
+        var: kernel
