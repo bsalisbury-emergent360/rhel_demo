@@ -5,6 +5,7 @@
   gather_facts: yes
 
 - name: print vm info
+  hosts: localhost.
   connection: local
   vars:
     versions: {}
