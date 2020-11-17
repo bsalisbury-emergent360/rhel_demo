@@ -16,3 +16,7 @@
 
     - debug:
         var: kernel
+
+    - debug:
+        msg: "foo"
+      when: kernel | version_compare('4.18.0', '>')
