@@ -19,7 +19,7 @@
         var: kernel
 
     - debug:
-        msg: "foo"
+        msg: "OK: kernel is >= 4.18.0"
       when: kernel is version('4.18.0', '>=')
 
 - name: print vm info
