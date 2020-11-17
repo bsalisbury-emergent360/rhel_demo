@@ -6,8 +6,8 @@
 
   tasks:
 
-    - debug:
-        var: ansible_facts
+#    - debug:
+#        var: ansible_facts
 
     - debug:
         var: ansible_distribution
