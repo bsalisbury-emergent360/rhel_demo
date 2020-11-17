@@ -20,14 +20,14 @@
     - debug:
         msg: "{{ lookup('template', './templates/print_versions.j2') }}"
 
-#    - debug:
-#        var: ansible_facts
-
-#    - debug:
-#        var: ansible_distribution
+    - debug:
+        var: ansible_facts
 
     - debug:
-        var: tags.Stage
+        var: ansible_distribution
+
+    - debug:
+        var: tag.Stage
 
     - debug:
         var: kernel
