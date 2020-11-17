@@ -27,7 +27,7 @@
         var: ansible_distribution
 
     - debug:
-        var: tag.Stage
+        var: tags.Stage
 
     - debug:
         var: kernel
