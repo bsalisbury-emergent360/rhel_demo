@@ -10,3 +10,6 @@
 
     - debug:
         var: ansible_distribution
+
+    - debug:
+        var: tags.Stage
