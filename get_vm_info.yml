@@ -12,26 +12,3 @@
     - debug:
         var: tags.Stage
 
-    - debug:
-        var: kernel
-
-    - debug:
-        msg: "OK: kernel is >= 4.18.0"
-      when: kernel is version('4.18.0', '>=')
-
-- name: print vm info
-  hosts: localhost
-  connection: local
-  vars:
-    versions: {}
-
-  tasks:
-
-    - set_fact: 
-        versions: "{{ versions | combine( { item: hostvars[item]['ansible_distribution_version'] + '_' + hostvars[item]['ansible_kernel']  } ) }}"
-      with_inventory_hostnames:
-        - all
-
-    - debug:
-        msg: "{{ lookup('template', './templates/print_versions.j2') }}"
-
