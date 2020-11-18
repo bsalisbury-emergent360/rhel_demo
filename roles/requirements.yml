@@ -3,6 +3,7 @@
 - src: https://github.com/Emergent360/create_vpc_peering.git
 - src: https://github.com/Emergent360/launch_rhel_ami.git
 - src: https://github.com/Emergent360/register_rhel_subscription.git
+- src: https://github.com/Emergent360/deregister_rhel_subscription.git
 - src: https://github.com/Emergent360/update_rhel_packages.git
 - src: https://github.com/Emergent360/install_openscap.git
 - src: https://github.com/Emergent360/launch_oscap_scan.git
