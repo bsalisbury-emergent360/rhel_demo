@@ -1,1 +1,1 @@
-# launch_oscap_scan
+# RHEL management demonstration playbooks
