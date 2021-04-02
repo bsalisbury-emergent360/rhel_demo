@@ -1,0 +1,8 @@
+---
+
+- name: "Teardown RHEL Cluster VPC"
+  hosts: localhost
+  gather_facts: no
+
+  roles:
+  - teardown_rhel_cluster
