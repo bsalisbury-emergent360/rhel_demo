@@ -1,8 +1,0 @@
----
-
-- name: "Update RHEL packages"
-  hosts: all
-  gather_facts: yes
-
-  roles:
-  - update_rhel_packages

@@ -1,8 +1,0 @@
----
-
-- name: "Install OpenSCAP"
-  hosts: all
-  gather_facts: yes
-
-  roles:
-  - install_openscap

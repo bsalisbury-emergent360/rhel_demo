@@ -1,8 +1,0 @@
----
-
-- name: "Launch OpenSCAP scan"
-  hosts: all
-  gather_facts: yes
-
-  roles:
-  - launch_oscap_scan
